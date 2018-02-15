@@ -44,7 +44,7 @@ function tableify(obj, columns, parents) {
             //loop through every object and get unique keys
             var keys = {};
             obj.forEach(function (o) {
-                if (typeof o === 'object' && !Array.isArray(o)) {
+                if (o != null && typeof o == 'object' && !Array.isArray(o)) {
                     Object.keys(o).forEach(function (k) {
                         keys[k] = true;
                     });
